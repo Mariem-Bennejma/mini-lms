@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cours HTML : structure d'une page, balises sémantiques, liens, images et listes.">
+    <title>Les bases du HTML - MiniLMS</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body data-course="html">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html">MiniLMS</a>
+            <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav class="menu" id="menu" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../index.html#cours">Cours</a></li>
+                    <li><a href="../index.html#apropos">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <h1>Les bases du HTML</h1>
+            <p>Apprenez à structurer une page web.</p>
+            <div class="progress" role="progressbar" aria-label="Progression du cours" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-bar" id="course-bar"></div>
+            </div>
+            <p class="progress-label" id="course-label">0 % complété</p>
+        </div>
+    </section>
+
+    <div class="container course-layout">
+        <aside class="sidebar" aria-label="Sommaire du cours">
+            <h2>Sommaire</h2>
+            <ol>
+                <li><a href="#lecon1">Structure d'une page</a></li>
+                <li><a href="#lecon2">Balises sémantiques</a></li>
+                <li><a href="#lecon3">Liens, images et listes</a></l>
+            </ol>
+            <a href="../index.html#cours">&larr; Tous les cours</a>
+        </aside>
+
+        <main>
+            <section class="lesson" id="lecon1">
+                <h2>Leçon 1 : Structure d'une page</h2>
+                <p>Toute page HTML commence par une déclaration de type de document, puis un élément <code>html</code> qui contient deux parties : <code>head</code> (informations sur la page) et <code>body</code> (contenu visible).</p>
+                <svg class="schema" viewBox="0 0 300 140" role="img" aria-labelledby="svg-titre">
+                    <title id="svg-titre">Arbre d'un document HTML : html contient head et body</title>
+                    <rect x="110" y="10" width="80" height="30" rx="6" fill="#4f46e5"/>
+                    <text x="150" y="30" text-anchor="middle" fill="#ffffff" font-size="14">html</text>
+                    <line x1="150" y1="40" x2="70" y2="90" stroke="#64748b" stroke-width="2"/>
+                    <line x1="150" y1="40" x2="230" y2="90" stroke="#64748b" stroke-width="2"/>
+                    <rect x="30" y="90" width="80" height="30" rx="6" fill="#06b6d4"/>
+                    <text x="70" y="110" text-anchor="middle" fill="#ffffff" font-size="14">head</text>
+                    <rect x="190" y="90" width="80" height="30" rx="6" fill="#06b6d4"/>
+                    <text x="230" y="110" text-anchor="middle" fill="#ffffff" font-size="14">body</text>
+                </svg>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bonjour&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <button class="done-btn" type="button" data-lesson="l1">Marquer comme terminé</button>
+        </section>
+
+        <section class="lesson" id="lecon2">
+            <h2>Leçon 2 : Balises sémantiques</h2>
+            <p>Les balises sémantiques décrivent le rôle de chaque zone : <code>header</code> pour l'en-tête, <code>nav</code> pour la navigation, <code>main</code> pour le contenu principal, <code>section</code> et <code>article</code> pour organiser le contenu, <code>footer</code> pour le pied de page. Elles améliorent l'accessibilité et le référencement.</p>
+            <pre><code>&lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Titre de section&lt;/h2&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+            <button class="done-btn" type="button" data-lesson="l2">Marquer comme terminé</button>
+        </section>
+
+        <section class="lesson" id="lecon3">
+            <h2>Leçon 3 : Liens, images et listes</h2>
+            <p>Un lien utilise <code>a</code> avec l'attribut <code>href</code>. Une image utilise <code>img</code> avec <code>src</code> et un texte alternatif <code>alt</code> obligatoire. Les listes se font avec <code>ul</code> (à puces) ou <code>ol</code> (numérotée).</p>
+            <pre><code>&lt;a href="https://www.w3.org"&gt;Site du W3C&lt;/a&gt;
+&lt;img src="logo.png" alt="Logo du site"&gt;
+&lt;ul&gt;
+    &lt;li&gt;Premier élément&lt;/li&gt;
+    &lt;li&gt;Deuxième élément&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            <p>Vidéo de révision :</p>
+            <div class="video">
+                <iframe src="https://www.youtube-nocookie.com/embed/https://youtu.be/it1rTvBcfRg?si=PbCfbTa1zhIFNpGD" title="Vidéo : introduction au HTML" allowfullscreen></iframe>
+            </div>
+            <button class="done-btn" type="button" data-lesson="l3">Marquer comme terminé</button>
+        </section>
+
+        <nav class="course-nav" aria-label="Navigation entre les cours">
+            <a href="../index.html#cours">Tous les cours</a>
+            <a href="css.html">Cours suivant : CSS &rarr;</a>
+        </nav>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025/2026 MiniLMS · ISSAT Sousse · FIA3</p>
+        </div>
+    </footer>
+</body>
+</html>

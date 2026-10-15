@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MiniLMS : une plateforme de cours en ligne pour apprendre HTML, CSS et JavaScript.">
+    <title>MiniLMS - Plateforme de cours en ligne</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">MiniLMS</a>
+            <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav class="menu" id="menu" aria-label="Navigation principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="#cours">Cours</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil">
+            <div class="container">
+                <h1>Apprenez le web, un module à la fois</h1>
+                <p>MiniLMS est une mini plateforme de cours en ligne. Suivez les leçons, regardez les vidéos et visualisez votre progression.</p>
+                <a class="btn" href="#cours">Voir les cours</a>
+            </div>
+        </section>
+
+        <section class="section" id="cours">
+            <div class="container">
+                <h2>Nos cours</h2>
+                <p class="section-intro">Choisissez un module et marquez chaque leçon comme terminée.</p>
+                <div class="grid">
+
+                    <article class="card" data-course="html" data-total="3">
+                        <div class="card-banner banner-html" aria-hidden="true">HTML</div>
+                        <div class="card-body">
+                            <h3>Les bases du HTML</h3>
+                            <p>Structure d'une page, balises sémantiques, liens, images et listes.</p>
+                            <p class="meta">3 leçons . environ 30 min</p>
+                            <div class="progress" role="progressbar" aria-label="Progression du cours HTML" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <p class="progress-label">0 % complété</p>
+                            <a class="btn" href="pages/html.html">Commencer</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-course="css" data-total="3">
+                        <div class="card-banner banner-css" aria-hidden="true">CSS</div>
+                        <div class="card-body">
+                            <h3>Mettre en forme avec CSS</h3>
+                            <p>Sélecteurs, couleurs, Flexbox, Grid et design responsive.</p>
+                            <p class="meta">3 leçons · environ 40 min</p>
+                            <div class="progress" role="progressbar" aria-label="Progression du cours CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <p class="progress-label">0 % complété</p>
+                            <a class="btn" href="pages/css.html">Commencer</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-course="js" data-total="3">
+                        <div class="card-banner banner-js" aria-hidden="true">JS</div>
+                        <div class="card-body">
+                        <h3>Initiation à JavaScript</h3>
+                        <p>Variables, fonctions, manipulation du DOM et événements.</p>
+                        <p class="meta">3 leçons · environ 40 min</p>
+                        <div class="progress" role="progressbar" aria-label="Progression du cours JavaScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <p class="progress-label">0 % complété</p>
+                        <a class="btn" href="pages/javascript.html">Commencer</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="apropos">
+            <div class="container">
+                <h2>À propos de la plateforme</h2>
+                <p class="section-intro">Un mini LMS réalisé dans le cadre du mini projet web FIA3.</p>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Contenus variés</h3>
+                        <p>Texte, schémas, extraits de code et vidéos dans chaque leçon.</p>
+                    </div>
+                <div class="feature">
+                    <h3>Progression visuelle</h3>
+                    <p>Une barre de progression par cours, conservée dans votre navigateur.</p>
+                </div>
+                <div class="feature">
+                    <h3>Responsive</h3>
+                    <p>Une interface adaptée au mobile, à la tablette et au bureau.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025/2026 MiniLMS · ISSAT Sousse</p>
+        </div>
+    </footer>
+</body>
+</html>
