@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cours JavaScript : variables, fonctions, manipulation du DOM et événements.">
+  <title>Initiation à JavaScript - MiniLMS</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/course.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body data-course="js">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">MiniLMS</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+      <nav class="menu" id="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#cours">Cours</a></li>
+          <li><a href="../index.html#apropos">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="course-header">
+    <div class="container">
+        <h1> initiation à JavaScript</h1>
+        <p>Rendez vos pages interactives.</p>
+        <div class="progress" role="progressbar" aria-label="Progression du cours" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+             <div class="progress-bar" id="course-bar"></div>
+        </div>
+      <p class="progress-label" id="course-label">0 % complété</p>
+    </div> 
+ </section>    
+<div class="container course-layout">
+    <aside class="sidebar" aria-label="Sommaire du cours">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#lecon1">Variables et types</a></li>
+        <li><a href="#lecon2">Fonctions</a></li>
+        <li><a href="#lecon3">DOM et événements</a></li>
+      </ol>
+      <a href="../index.html#cours">&larr; Tous les cours</a>
+    </aside>
+
+    <main>
+      <section class="lesson" id="lecon1">
+        <h2>Leçon 1 : Variables et types</h2>
+        <p>On déclare une variable avec <code>let</code> (modifiable) ou <code>const</code> (constante). Les types de base sont les chaînes, les nombres et les booléens.</p>
+        <pre><code>let nom = "Sara";
+const age = 20;
+let inscrit = true;</code></pre>
+        <button class="done-btn" type="button" data-lesson="l1">Marquer comme terminé</button>
+      </section>
+
+      <section class="lesson" id="lecon2">
+        <h2>Leçon 2 : Fonctions</h2>
+        <p>Une fonction regroupe des instructions réutilisables. La syntaxe fléchée est la plus courte.</p>
+        <pre><code>const somme = (a, b) =&gt; a + b;
+console.log(somme(2, 3)); // 5</code></pre>
+        <button class="done-btn" type="button" data-lesson="l2">Marquer comme terminé</button>
+      </section>
+
+      <section class="lesson" id="lecon3">
+        <h2>Leçon 3 : DOM et événements</h2>
+        <p>Le DOM représente la page. On sélectionne un élément avec <code>querySelector</code> et on réagit à une action avec <code>addEventListener</code>.</p>
+        <pre><code>const bouton = document.querySelector("button");
+bouton.addEventListener("click", () =&gt; {
+  bouton.textContent = "Cliqué !";
+});</code></pre>
+        <p>Vidéo de révision :</p>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/zofMnllkVfI" title="Vidéo : introduction à JavaScript" allowfullscreen></iframe>
+        </div>
+        <button class="done-btn" type="button" data-lesson="l3">Marquer comme terminé</button>
+      </section>
+
+      <nav class="course-nav" aria-label="Navigation entre les cours">
+        <a href="css.html">&larr; Cours précédent : CSS</a>
+        <a href="../index.html#cours">Retour aux cours</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025/2026 MiniLMS · ISSAT Sousse · FIA3</p>
+    </div>
+  </footer>
+</body>
+</html>
