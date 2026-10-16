@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Cours CSS : sélecteurs, couleurs, Flexbox, Grid et design responsive.">
-        <title>Mettre en forme avec css - MiniLMS</title>
-        <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/course.css">
-        <script src="../js/script.js" defer></script>
-    </head>
-    <body data-course="css">
-        <header class="site-header">
-             <div class="container header-inner">
-      <a class="logo" href="../index.html">MiniLMS</a>
-      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cours CSS : sélecteurs, couleurs, Flexbox, Grid et design responsive.">
+  <title>Mettre en forme avec CSS - MiniLMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/course.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body data-course="css">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>MiniLMS</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">Menu</button>
       <nav class="menu" id="menu" aria-label="Navigation principale">
         <ul>
           <li><a href="../index.html">Accueil</a></li>
@@ -22,50 +25,59 @@
         </ul>
       </nav>
     </div>
-        </header>
+  </header>
 
-        <section class="course-header">
-            <div class="container">
-                <h1>Mettre en forme avec CSS</h1>
-                <p>Donnez du style et de la structure à vos pages.</p>
-                    <div class="progress" role="progressbar" aria-label="Progression du cours" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                        <div class="progress-bar" id="course-bar"></div>
-                    </div>
-                <p class="progress-label" id="course-label">0 % complété</p>
-            </div>
-        </section>
-        <div class="container course-layout">
+  <section class="course-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="../index.html#cours">Cours</a> / Module 2</p>
+      <h1>Mettre en forme avec CSS</h1>
+      <p class="course-sub">Donnez du style et de la structure à vos pages.</p>
+      <div class="progress" role="progressbar" aria-label="Progression du cours" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-bar" id="course-bar"></div>
+      </div>
+      <p class="progress-label" id="course-label">0 % complété</p>
+    </div>
+  </section>
+
+  <div class="container course-layout">
     <aside class="sidebar" aria-label="Sommaire du cours">
       <h2>Sommaire</h2>
       <ol>
-        <li><a href="#lecon1">Sélecteurs et couleurs</a></li>
-        <li><a href="#lecon2">Flexbox</a></li>
-        <li><a href="#lecon3">Grid et responsive</a></li>
+        <li data-toc="l1"><a href="#lecon1">Sélecteurs et couleurs</a></li>
+        <li data-toc="l2"><a href="#lecon2">Flexbox</a></li>
+        <li data-toc="l3"><a href="#lecon3">Grid et responsive</a></li>
       </ol>
-      <a href="../index.html#cours">&larr; Tous les cours</a>
+      <a class="back-link" href="../index.html#cours">&larr; Tous les cours</a>
     </aside>
+
     <main>
-            <section class="lesson" id="lecon1">
-                <h2>Leçon 1 : sélecteurs et coulours</h2>
-                <p> Ine régle CSS cible des éléments avec un sélecteur (balise,classe<code>.carte</code> ou identifiant<code>#menu</code>) puis applique des propriétés.</p>
-                <pre><code>h1 {color:#4f46e5;}
-                   .carte { background: white; border-radius: 14px; }
-                    #menu { display: none; }</code></pre>
-                <button class="done-btn" type="button" data-lesson="l1">Marquer comme terminé</button>
-            </section>
-            <section class="lesson" id="lecon2">
-                <h2>Leçon 2 : Flexbox</h2>
-                <p>Flexbox aligne des éléments sur un axe (ligne ou colonne). Avec <code>display: flex</code> sur le parent, on contrôle l'alignement avec <code>justify-content</code> et <code>align-items</code>.</p>
-                <pre><code>.menu ul { display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }</code></pre>
-                <button class="done-btn" type="button" data-lesson="l2">Marquer comme terminé</button>
-            </section>
-            <section class="lesson" id ="lecon3">
-                <h2> Leçon 3 : Grid et responsive</h2>
-                <p>Grid organise des éléments en lignes et colonnes. Les media queries adaptent la mise en page à la taille de l'écran.</p>
-        <pre><code>.grid {
+      <section class="lesson" id="lecon1">
+        <p class="lesson-kicker">Leçon 1</p>
+        <h2>Sélecteurs et couleurs</h2>
+        <p>Une règle CSS cible des éléments avec un sélecteur (balise, classe <code>.carte</code> ou identifiant <code>#menu</code>) puis applique des propriétés.</p>
+        <pre data-lang="CSS"><code>h1 { color: #4f46e5; }
+.carte { background: white; border-radius: 14px; }
+#menu { display: none; }</code></pre>
+        <button class="done-btn" type="button" data-lesson="l1">Marquer comme terminé</button>
+      </section>
+
+      <section class="lesson" id="lecon2">
+        <p class="lesson-kicker">Leçon 2</p>
+        <h2>Flexbox</h2>
+        <p>Flexbox aligne des éléments sur un axe (ligne ou colonne). Avec <code>display: flex</code> sur le parent, on contrôle l'alignement avec <code>justify-content</code> et <code>align-items</code>.</p>
+        <pre data-lang="CSS"><code>.menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+        <button class="done-btn" type="button" data-lesson="l2">Marquer comme terminé</button>
+      </section>
+
+      <section class="lesson" id="lecon3">
+        <p class="lesson-kicker">Leçon 3</p>
+        <h2>Grid et responsive</h2>
+        <p>Grid organise des éléments en lignes et colonnes. Les media queries adaptent la mise en page à la taille de l'écran.</p>
+        <pre data-lang="CSS"><code>.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
@@ -73,12 +85,12 @@
 @media (min-width: 768px) {
   .burger { display: none; }
 }</code></pre>
-        <p>Vidéo de révision :</p>
+        <p class="video-title">Vidéo de révision</p>
         <div class="video">
-          <iframe src="https://www.youtube-nocookie.com/embed/it1rTvBcfRg" title="Vidéo : introduction à CSS Grid" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/AGDDdsiZ0Ko" title="Vidéo : introduction à CSS Grid" allowfullscreen></iframe>
         </div>
         <button class="done-btn" type="button" data-lesson="l3">Marquer comme terminé</button>
-            </section>
+      </section>
 
       <nav class="course-nav" aria-label="Navigation entre les cours">
         <a href="html.html">&larr; Cours précédent : HTML</a>
@@ -88,10 +100,10 @@
   </div>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025/2026 MiniLMS · ISSAT Sousse · FIA3</p>
+    <div class="container footer-inner">
+      <p>&copy; 2025/2026 MiniLMS</p>
+      <p>ISSAT Sousse</p>
     </div>
   </footer>
-    </main>
 </body>
 </html>
