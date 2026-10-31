@@ -208,7 +208,7 @@ const vueAccueil = () => {
         <span class="shape shape-ring" aria-hidden="true"></span>
         <div class="container hero-grid">
             <div class="hero-text">
-                <p class="eyebrow">Mini projet web · FIA3</p>
+                <p class="eyebrow">Mini projet web</p>
                 <h1>Apprenez le web, <mark>un module à la fois</mark></h1>
                 <p class="lead">MiniLMS est une mini plateforme de cours en ligne. Suivez les leçons, regardez les vidéos, passez les quiz et visualisez votre progression.</p>
                 <div class="hero-actions">
@@ -237,7 +237,7 @@ const vueAccueil = () => {
     <section class="section section-alt" id="apropos">
         <div class="container">
             <h2>À propos de la plateforme</h2>
-            <p class="section-intro">Un mini LMS réalisé dans le cadre du mini projet web FIA3.</p>
+            <p class="section-intro">Un mini LMS réalisé dans le cadre du mini projet web.</p>
             <div class="features">
                 <div class="feature">
                     <h3>Contenus variés</h3>
